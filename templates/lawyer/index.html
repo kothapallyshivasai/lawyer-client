@@ -91,7 +91,7 @@
     <hr />
     <div class="container mt-2">
       <div class="row">
-        <div class="col-8 offset-2">
+        <div class="col-xl-8 col-12 mb-2 offset-xl-2">
           <div class="card shadow">
             <div class="card-body">
               <h2 class="text-muted">Your Case Types</h2>
@@ -125,7 +125,7 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col-8 offset-2">
+        <div class="col-xl-8 col-12 mb-2 offset-xl-2">
           <div class="card shadow">
             <div class="card-body">
               <h2 class="text-muted">Add Case Types</h2>
@@ -161,7 +161,7 @@
       <h2 id="bookings" class="text-center">Your Bookings</h2>
       <div class="row">
         {% for b in bookings %}
-        <div class="col-8 mb-2 offset-2">
+        <div class="col-xl-8 col-12 mb-2 offset-xl-2">
           <div class="card shadow">
             <div class="card-body">
               <div class="row">
@@ -179,7 +179,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <div class="mb-3">
                     <label for="mobile" class="form-label">Mobile</label>
                     <input
@@ -193,7 +193,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-5">
+                <div class="col-4">
                   <div class="mb-3">
                     <label for="case_type" class="form-label">Case Type</label>
                     <input
@@ -203,6 +203,20 @@
                       id="case_type"
                       aria-describedby="helpId"
                       value="{{b.case_type}}"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="mb-3">
+                    <label for="date_time" class="form-label">Date Time</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="date_time"
+                      id="date_time"
+                      aria-describedby="helpId"
+                      value="{{b.date_time}}"
                       readonly
                     />
                   </div>
